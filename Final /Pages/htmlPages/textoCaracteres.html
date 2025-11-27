@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assest/CSS/estilosPrincipal.css">
+
+    <title>Texto y Caracteres</title>
+</head>
+
+<body>
+     
+    <header class="header-principal">
+
+        <div class="logo">
+            <img src="../../assest/IMG/LogoBUAPB.png" alt="logo BUAP"> 
+        </div>
+
+        <h1>Aplicaciones Web</h1>
+
+    </header>
+
+    <nav class="nav-principal">
+        
+        <a href="../HTML.html">HTML</a>
+        <a href="../CSS.html">CSS</a>
+        <a href="../../Index.html">Página Principal</a>
+
+    </nav>
+     
+    <div class="layout-contenido">
+
+        <aside class="sidebar-curso">
+            <h3>Índice del Tema</h3>
+            <ul>
+                <li><a href="#caracteres">Caracteres Especiales</a></li>
+                <li><a href="#entidades">Tabla de Entidades</a></li>
+                <li><a href="#comentarios">Comentarios</a></li>
+                <li><a href="#espacios">Espacios en Blanco</a></li>
+                <li><a href="#saltos">Saltos de Línea</a></li>
+                <li><a href="#pre">Texto Preformateado</a></li>
+            </ul>
+        </aside>
+
+        <article class="detalle-texto">
+
+            <section id="caracteres" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h1>Caracteres Especiales y Entidades</h1>
+                <p>
+                    Los caracteres <code class="terminal2">&lt;</code> y <code class="terminal2">&gt;</code> son caracteres especiales que indican inicio y fin de etiqueta. Si se desea insertar estos caracteres como texto visible para el usuario, hay que escribir el nombre que los representa (su entidad HTML).
+                </p>
+                <p>
+                    De igual manera, existen caracteres que no se visualizan correctamente en algunos navegadores antiguos o configuraciones específicas (como la <strong>ñ</strong> y las vocales acentuadas), por lo que se recomienda usar su representación.
+                </p>
+            </section>
+
+            <section id="entidades" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Tabla de Referencia</h2>
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 1rem; color: #374151; background-color: #f9fafb; border: 1px solid #e5e7eb;">
+                        <thead>
+                            <tr style="background-color: var(--secondary-bg-color); color: white;">
+                                <th style="padding: 10px; text-align: left;">Símbolo</th>
+                                <th style="padding: 10px; text-align: left;">Representación (Entidad)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #e5e7eb;"><td style="padding: 8px;">&lt;</td><td style="padding: 8px;"><code class="terminal2">&amp;lt;</code></td></tr>
+                            <tr style="border-bottom: 1px solid #e5e7eb;"><td style="padding: 8px;">&gt;</td><td style="padding: 8px;"><code class="terminal2">&amp;gt;</code></td></tr>
+                            <tr style="border-bottom: 1px solid #e5e7eb;"><td style="padding: 8px;">á</td><td style="padding: 8px;"><code class="terminal2">&amp;aacute;</code></td></tr>
+                            <tr style="border-bottom: 1px solid #e5e7eb;"><td style="padding: 8px;">é</td><td style="padding: 8px;"><code class="terminal2">&amp;eacute;</code></td></tr>
+                            <tr style="border-bottom: 1px solid #e5e7eb;"><td style="padding: 8px;">í</td><td style="padding: 8px;"><code class="terminal2">&amp;iacute;</code></td></tr>
+                            <tr style="border-bottom: 1px solid #e5e7eb;"><td style="padding: 8px;">ó</td><td style="padding: 8px;"><code class="terminal2">&amp;oacute;</code></td></tr>
+                            <tr style="border-bottom: 1px solid #e5e7eb;"><td style="padding: 8px;">ú</td><td style="padding: 8px;"><code class="terminal2">&amp;uacute;</code></td></tr>
+                            <tr style="border-bottom: 1px solid #e5e7eb;"><td style="padding: 8px;">ñ</td><td style="padding: 8px;"><code class="terminal2">&amp;ntilde;</code></td></tr>
+                            <tr style="border-bottom: 1px solid #e5e7eb;"><td style="padding: 8px;">Ñ</td><td style="padding: 8px;"><code class="terminal2">&amp;Ntilde;</code></td></tr>
+                            <tr style="border-bottom: 1px solid #e5e7eb;"><td style="padding: 8px;">&amp;</td><td style="padding: 8px;"><code class="terminal2">&amp;amp;</code></td></tr>
+                            <tr style="border-bottom: 1px solid #e5e7eb;"><td style="padding: 8px;">©</td><td style="padding: 8px;"><code class="terminal2">&amp;copy;</code></td></tr>
+                            <tr style="border-bottom: 1px solid #e5e7eb;"><td style="padding: 8px;">®</td><td style="padding: 8px;"><code class="terminal2">&amp;reg;</code></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="comentarios" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Comentarios en HTML</h2>
+                <p>
+                    Podemos añadir comentarios aclaratorios dentro del código que <strong>no serán visualizados en el navegador</strong>, pero sí al editar el documento.
+                </p>
+                <p>
+                    Para insertar comentarios, basta insertar el texto entre <code class="terminal2">&lt;!--</code> y <code class="terminal2">--&gt;</code>.
+                </p>
+                <pre class="terminal"><code>&lt;!-- Esto es un comentario oculto --&gt;
+&lt;p&gt;Hola soy un texto visible&lt;/p&gt;</code></pre>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="espacios" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h3>Espacios en blanco</h3>
+                <p>
+                    Siempre que se inserta texto en HTML hay que tener en cuenta que si se escriben varios espacios en blanco seguidos (con la barra espaciadora), el navegador <strong>solamente mostrará uno</strong>.
+                </p>
+                <p>
+                    Para conseguir que se muestren varios espacios forzados, debe sustituirse cada uno de ellos por la entidad <code class="terminal2">&amp;nbsp;</code> (Non-Breaking Space).
+                </p>
+                <pre class="terminal"><code>&lt;p&gt;
+    &iexcl;Bienvenidos, esta es mi&amp;nbsp;&amp;nbsp;&amp;nbsp;página&amp;nbsp;&amp;nbsp;web!
+&lt;/p&gt;</code></pre>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="saltos" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h1>Saltos de Línea <code>&lt;br&gt;</code></h1>
+                <p>
+                    En general, cuando trabajamos con un editor de texto se produce un salto de línea al pulsar la tecla <code class="terminal2">INTRO</code>. Sin embargo, en HTML, ese salto se produce en el código fuente pero <strong>no se muestra en el navegador</strong>.
+                </p>
+                <p>
+                    Para que se produzca un salto de línea visual en el navegador, hay que insertar la etiqueta <code class="terminal2">&lt;br&gt;</code>.
+                </p>
+
+                <div style="background-color: #f9fafb; padding: 1rem; border-left: 4px solid var(--accent-color); margin: 1rem 0;">
+                    
+                    <strong>Ejemplo:</strong>
+                    <pre class="terminal" style="margin-top: 0.5rem;"><code>&lt;p&gt;
+    Queridos Usuarios,&lt;br&gt;
+    tengo el placer de comunicarles que hay una nueva sección.
+&lt;/p&gt;</code></pre>
+                    <p><strong>Resultado visual:</strong></p>
+                    <p style="background: white; padding: 10px; border: 1px solid #ddd;">
+                        Queridos Usuarios,<br>
+                        tengo el placer de comunicarles que hay una nueva sección.
+                    </p>
+
+                </div>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="pre" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h1>Texto Preformateado <code>&lt;pre&gt;</code></h1>
+                <p>
+                    Una forma de asegurarnos de que el texto aparezca en el navegador <strong>tal cual ha sido escrito dentro del código</strong>, es utilizando las etiquetas <code class="terminal2">&lt;pre&gt;</code> y <code class="terminal2">&lt;/pre&gt;</code>.
+                </p>
+                <p>
+                    Utilizando estas etiquetas podemos tener la seguridad de que se mostrarán todos los espacios en blanco y los saltos de tecla <code class="terminal2">INTRO</code> sin necesidad de usar <code class="terminal2">&lt;br&gt;</code> o <code class="terminal2">&amp;nbsp;</code>.
+                </p>
+                
+                <p><strong>Limitación:</strong> Dentro de <code class="terminal2">&lt;pre&gt;</code> no se deben incluir etiquetas de bloque o multimedia como <code class="terminal2">&lt;img&gt;</code>, <code class="terminal2">&lt;object&gt;</code>, <code class="terminal2">&lt;big&gt;</code>, etc.</p>
+
+                <div style="background-color: #f9fafb; padding: 1rem; border-left: 4px solid var(--accent-color); margin: 1rem 0;">
+                    <strong>Ejemplo de Código:</strong>
+                    <pre class="terminal" style="margin-top: 0.5rem;"><code>&lt;pre&gt;
+Hola, BIENVENIDOS
+ESTA.    ES MI PAGINA web
+           ksksksk.          ksksk
+&lt;/pre&gt;</code></pre>
+                    
+                    <p><strong>Resultado visual (Nota cómo respeta los espacios extraños):</strong></p>
+                    <pre style="background: white; border: 1px solid #ccc; padding: 10px; color: black; font-family: monospace;">
+Hola, BIENVENIDOS
+ESTA.    ES MI PAGINA web
+           ksksksk.          ksksk
+</pre>
+                </div>
+            </section>
+
+        </article>
+
+    </div>
+
+      <footer>
+        <p>Integrantes del Equipo:</p>
+        <p><strong>Elias Oziel Sanchez Fernandez</strong> | <strong>Juan Pablo Rios Gomez</strong></p>
+        <br>
+        <a href="../contacto.html" style="color: #f3f4f6; text-decoration: underline;">comentarios y contacto</a>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assest/CSS/estilosPrincipal.css">
+    <title>Selectores y Sintaxis</title>
+</head>
+
+<body>
+    
+    <header class="header-principal">
+        <div class="logo">
+            <img src="../../assest/IMG/LogoBUAPB.png" alt="logo BUAP"> 
+        </div>
+        <h1>Aplicaciones Web</h1>
+    </header>
+
+    <nav class="nav-principal">
+        <a href="../HTML.html">HTML</a>
+        <a href="../CSS.html">CSS</a>
+        <a href="../../Index.html">Página Principal</a>
+    </nav>
+     
+    <div class="layout-contenido">
+
+        <aside class="sidebar-curso">
+            <h3>Índice del Tema</h3>
+            <ul>
+                <li><a href="#sintaxis">Sintaxis General</a></li>
+                <li><a href="#basicos">Selectores Básicos</a></li>
+                <li><a href="#atributos">Selectores de Atributo</a></li>
+                <li><a href="#pseudoclases">Pseudo-clases Estructurales</a></li>
+                <li><a href="#avanzados">Selector de Negación</a></li>
+                <li><a href="#relacionales">Selectores Relacionales</a></li>
+            </ul>
+        </aside>
+
+        <article class="detalle-texto">
+
+            <section id="sintaxis" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h1>Sintaxis de CSS</h1>
+                <p>
+                    Un conjunto de reglas CSS consiste en un <strong>selector</strong> y un <strong>bloque de declaración</strong>.
+                </p>
+                <pre class="terminal"><code>h1 { 
+    color: blue; 
+    font-size: 12px; 
+}</code></pre>
+            </section>
+
+            <section id="basicos" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Selectores Básicos</h2>
+                <h3>1. Selector Universal (*)</h3>
+                <pre class="terminal"><code>* { margin: 0; }</code></pre>
+
+                <h3>2. Referencia por ID (#)</h3>
+                <pre class="terminal"><code>#articulo { font-size: 20px; }</code></pre>
+
+                <h3>3. Referencia por Clase (.)</h3>
+                <pre class="terminal"><code>.principal { font-size: 30px; }
+/* Referencia compleja con etiqueta */
+p.principal { font-size: 20px; }</code></pre>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="atributos" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Referencia por Atributo</h2>
+                <p>Las especificaciones de CSS3 permiten referenciar por cualquier atributo.</p>
+                
+                <pre class="terminal"><code>/* Elemento p con atributo name="especial" */
+p[name="especial"] {
+    color: red;
+}</code></pre>
+
+                <h3>Referencias Complejas</h3>
+                <ul>
+                    <li><strong>^=</strong> : Comienza con el valor.</li>
+                    <li><strong>$=</strong> : Termina con el valor.</li>
+                    <li><strong>*=</strong> : Contiene el texto.</li>
+                </ul>
+                <pre class="terminal"><code>p[name^="mi"] { font-size: 20px; } /* Comienza con "mi" */
+p[name$="mi"] { font-size: 40px; } /* Termina con "mi" */
+p[name*="mi"] { font-size: 60px; } /* Contiene "mi" */</code></pre>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="pseudoclases" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Pseudo-clases Estructurales</h2>
+                <p>Nos permiten hacer referencias considerando la estructura del documento (hijos).</p>
+
+                <h3>nth-child()</h3>
+                <p>Permite encontrar un hijo específico o patrón (odd/even).</p>
+                <pre class="terminal"><code>p:nth-child(2) { background: #999999; }</code></pre>
+
+                <h3>first-child, last-child, only-child</h3>
+                <pre class="terminal"><code>p:first-child { background: red; }   /* Primer hijo */
+p:last-child  { background: blue; }  /* Último hijo */
+p:only-child  { background: green; } /* Hijo único */</code></pre>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="avanzados" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Selector Avanzado: Negación <code>:not()</code></h2>
+                <p>Se emplea para realizar una negación.</p>
+                <pre class="terminal"><code>p:not(.classy) { color: red; }</code></pre>
+            </section>
+
+            <section id="relacionales" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Selectores Relacionales</h2>
+                <h3>1. Hijo Directo (>)</h3>
+                <pre class="terminal"><code>div > p.miestilo1 { color: #990000; }</code></pre>
+
+                <h3>2. Hermano Adyacente (+)</h3>
+                <pre class="terminal"><code>p.miestilo2 + p { color: #000099; }</code></pre>
+
+                <h3>3. Hermano General (~)</h3>
+                <pre class="terminal"><code>p.mitexto4 ~ p { color: #990099; }</code></pre>
+            </section>
+
+        </article>
+    </div>
+
+      <footer>
+        <p>Integrantes del Equipo:</p>
+        <p><strong>Elias Oziel Sanchez Fernandez</strong> | <strong>Juan Pablo Rios Gomez</strong></p>
+        <br>
+        <a href="../contacto.html" style="color: #f3f4f6; text-decoration: underline;">comentarios y contacto</a>
+    </footer>
+    
+</body>
+</html>

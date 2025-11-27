@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assest/CSS/estilosPrincipal.css">
+
+    <title>Formularios</title>
+</head>
+
+<body>
+        
+  <header class="header-principal">
+
+        <div class="logo">
+            <img src="../../assest/IMG/LogoBUAPB.png" alt="logo BUAP"> 
+        </div>
+
+        <h1>Aplicaciones Web</h1>
+
+    </header>
+
+    <nav class="nav-principal">
+        
+        <a href="../HTML.html">HTML</a>
+        <a href="../CSS.html">CSS</a>
+        <a href="../../Index.html">Página Principal</a>
+
+    </nav>
+     
+     
+    <div class="layout-contenido">
+
+        <aside class="sidebar-curso">
+            <h3>Índice del Tema</h3>
+            <ul>
+                <li><a href="#intro">¿Qué es un Formulario?</a></li>
+                <li><a href="#etiqueta">Etiqueta &lt;form&gt;</a></li>
+                <li><a href="#metodos">Métodos GET vs POST</a></li>
+                <li><a href="#textarea">Áreas de Texto</a></li>
+                <li><a href="#inputs">Inputs (Campos)</a></li>
+                <li><a href="#botones">Botones</a></li>
+                <li><a href="#ejemplo">Ejemplo Completo</a></li>
+            </ul>
+        </aside>
+
+        <article class="detalle-texto">
+
+            <section id="intro" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h1>Formularios en HTML</h1>
+                <p>
+                    Un formulario es un elemento que permite recoger datos introducidos por el usuario. Se utilizan para conocer opiniones, dudas, introducir pedidos a través de la red, etc.
+                </p>
+                <p>
+                    Un formulario está formado por etiquetas, campos de texto, menús desplegables y botones.
+                </p>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="etiqueta" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>La Etiqueta <code>&lt;form&gt;</code></h2>
+                <p>
+                    Los formularios se insertan a través de las etiquetas <code class="terminal2">&lt;form&gt;</code> y <code class="terminal2">&lt;/form&gt;</code>. Entre dichas etiquetas habrá que insertar los diferentes objetos.
+                </p>
+                
+                <h3>Atributos Principales</h3>
+                <ul>
+                    <li>
+                        <strong>action:</strong> Indica la dirección de correo o del programa que procesará el formulario.
+                    </li>
+                    <li>
+                        <strong>enctype:</strong> Indica el modo de cifrado. Por defecto es <em>application/x-www-form-urlencoded</em>.
+                    </li>
+                    <li>
+                        <strong>method:</strong> Indica cómo se transfieren las variables (GET o POST).
+                    </li>
+                </ul>
+
+                <pre class="terminal"><code>&lt;form action="mailto:formularios@servidor.com" method="post" enctype="text/plain"&gt;
+    ...
+&lt;/form&gt;</code></pre>
+            </section>
+
+            <section id="metodos" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Métodos: GET vs POST</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div style="background-color: #f9fafb; padding: 1rem; border: 1px solid #e5e7eb; border-radius: 8px;">
+                        <h3 style="color: var(--accent-color); margin-top: 0;">Método GET</h3>
+                        <p>
+                            Se utiliza cuando <strong>no se van a producir cambios</strong> en ningún documento o programa (solo lectura).
+                        </p>
+                        <p>Ejemplo: Consultas a bases de datos o buscadores.</p>
+                    </div>
+                    <div style="background-color: #f9fafb; padding: 1rem; border: 1px solid #e5e7eb; border-radius: 8px;">
+                        <h3 style="color: var(--accent-color); margin-top: 0;">Método POST</h3>
+                        <p>
+                            Se utiliza cuando <strong>sí se van a producir cambios</strong>, como almacenar datos.
+                        </p>
+                        <p>Ejemplo: Registrar un usuario, subir un archivo, guardar un pedido.</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="textarea" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Áreas de Texto <code>&lt;textarea&gt;</code></h2>
+                <p>Permiten insertar varias líneas de texto, ideales para comentarios.</p>
+                <ul>
+                    <li><strong>rows:</strong> Número de líneas visibles (alto).</li>
+                    <li><strong>cols:</strong> Número de caracteres por línea (ancho).</li>
+                    <li><strong>name:</strong> Nombre para identificar el campo.</li>
+                </ul>
+
+                <pre class="terminal"><code>&lt;textarea name="comentarios" cols="30" rows="3"&gt;
+Escribe aquí...
+&lt;/textarea&gt;</code></pre>
+            </section>
+
+            <section id="inputs" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Campo de Texto e Inputs <code>&lt;input&gt;</code></h2>
+                <p>La etiqueta <code class="terminal2">&lt;input&gt;</code> define la mayoría de los campos de entrada.</p>
+
+                <h3>Atributos comunes</h3>
+                <ul>
+                    <li><strong>type:</strong> Tipo de entrada (text, password, etc).</li>
+                    <li><strong>name:</strong> Nombre del campo.</li>
+                    <li><strong>size:</strong> Ancho visual en caracteres.</li>
+                    <li><strong>maxlength:</strong> Número máximo de caracteres permitidos.</li>
+                </ul>
+
+                <h3>Tipos de Input</h3>
+                
+                <div style="margin-bottom: 1rem;">
+                    <strong>1. Texto y Contraseña</strong>
+                    <pre class="terminal"><code>&lt;input type="text" value="Campo Texto"&gt;
+&lt;input type="password" value="secreto"&gt;</code></pre>
+                </div>
+
+                <div style="margin-bottom: 1rem;">
+                    <strong>2. Checkbox y Radio</strong>
+                    <pre class="terminal"><code>&lt;!-- Checkbox (Selección múltiple) --&gt;
+&lt;input type="checkbox" checked&gt; Acepto
+
+&lt;!-- Radio (Selección única) --&gt;
+&lt;input type="radio" name="grupo1" value="opcion1"&gt; Opción 1
+&lt;input type="radio" name="grupo1" value="opcion2"&gt; Opción 2</code></pre>
+                </div>
+
+                <div style="margin-bottom: 1rem;">
+                    <strong>3. Otros (File, Hidden)</strong>
+                    <pre class="terminal"><code>&lt;input type="file"&gt;
+&lt;input type="hidden" value="dato_oculto"&gt;</code></pre>
+                </div>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="botones" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Botones</h2>
+                <p>Se definen mediante <code class="terminal2">&lt;button&gt;</code> o <code class="terminal2">&lt;input type="..."&gt;</code>. El atributo <strong>value</strong> indica el texto que mostrará.</p>
+
+                <ul>
+                    <li><code class="terminal2">type="submit"</code>: Envía el formulario.</li>
+                    <li><code class="terminal2">type="reset"</code>: Restablece el formulario a su estado inicial.</li>
+                    <li><code class="terminal2">type="button"</code>: No realiza acción por defecto (para JavaScript).</li>
+                </ul>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="ejemplo" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h1>Ejemplo Práctico Completo</h1>
+                <p>A continuación se muestra el resultado visual del código de ejemplo proporcionado en el temario:</p>
+
+                <div style="background-color: #f9fafb; padding: 2rem; border-radius: 8px; border: 1px solid #e5e7eb;">
+                    <form action="mailto:formularios@servidor.com" method="post" enctype="text/plain">
+                        
+                        <p><strong>Datos Personales:</strong></p>
+                        <input name="campo" type="text" value="campo de texto" size="20" maxlength="15" placeholder="Usuario">
+                        <input name="contra" type="password" value="contraseña" size="20" maxlength="15" placeholder="Contraseña">
+                        
+                        <p><strong>Mensaje:</strong></p>
+                        <textarea name="ejemploarea" cols="30" rows="3">escribe el texto que quieras</textarea>
+                        
+                        <p><strong>Selecciones:</strong></p>
+                        <div>
+                            <input name="casilla" type="checkbox" value="acepto" checked> Acepto las condiciones del servicio
+                        </div>
+                        <div style="margin-top: 10px;">
+                            <input name="prefiere" type="radio" value="estudio" checked> Estudio
+                            <input name="prefiere" type="radio" value="trabajo" style="margin-left: 15px;"> Trabajo
+                        </div>
+
+                        <p><strong>Archivos y Ocultos:</strong></p>
+                        <input type="hidden" value="cookie">
+                        <input type="file" name="foto">
+
+                        <p><strong>Listas Desplegables:</strong></p>
+                        <select name="mascotas" style="margin-bottom: 10px;">
+                            <option selected>---elige animal---</option>
+                            <option>Perro</option>
+                            <option>Gato</option>
+                            <option>Hámster</option>
+                        </select>
+                        <br>
+                        <select name="animal" size="3"> 
+                            <option selected> ---elige animal--- </option>
+                            <option value="ave">loro</option>
+                            <option value="perro">perro</option>
+                        </select>
+
+                        <div style="margin-top: 2rem; border-top: 1px solid #ddd; padding-top: 1rem;">
+                            <button type="button" value="button" style="background-color: #ccc; color: black;">Botón</button>
+                            <button type="reset" value="Restablecer">Restablecer</button>
+                            <button type="submit" value="Enviar" class="btn-primary">Enviar</button>
+                        </div>
+
+                    </form>
+                </div>
+            </section>
+
+        </article>
+
+    </div>
+
+      <footer>
+        <p>Integrantes del Equipo:</p>
+        <p><strong>Elias Oziel Sanchez Fernandez</strong> | <strong>Juan Pablo Rios Gomez</strong></p>
+        <br>
+        <a href="../contacto.html" style="color: #f3f4f6; text-decoration: underline;">comentarios y contacto</a>
+    </footer>
+    
+
+</body>
+</html>

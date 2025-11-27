@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assest/CSS/estilosPrincipal.css">
+
+    <title>Tipografía y Color</title>
+</head>
+
+<body>
+        
+   <header class="header-principal">
+
+        <div class="logo">
+            <img src="../../assest/IMG/LogoBUAPB.png" alt="logo BUAP"> 
+        </div>
+
+        <h1>Aplicaciones Web</h1>
+
+    </header>
+
+    <nav class="nav-principal">
+        
+        <a href="../HTML.html">HTML</a>
+        <a href="../CSS.html">CSS</a>
+        <a href="../../Index.html">Página Principal</a>
+
+    </nav>
+     
+     
+   <div class="layout-contenido">
+
+        <aside class="sidebar-curso">
+            <h3>Índice del Tema</h3>
+            <ul>
+                <li><a href="#propiedad-font">Propiedad Font (Shorthand)</a></li>
+                <li><a href="#estilos">Estilos (Style & Variant)</a></li>
+                <li><a href="#peso">Grosor (Weight)</a></li>
+                <li><a href="#tamano">Tamaño (Size)</a></li>
+                <li><a href="#familia">Familia (Family)</a></li>
+                <li><a href="#color-texto">Color de Texto</a></li>
+                <li><a href="#color-borde">Color de Borde</a></li>
+            </ul>
+        </aside>
+
+        <article class="detalle-texto">
+
+            <section id="propiedad-font" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h1>Propiedades de Fuente</h1>
+                <p>
+                    La propiedad <code class="terminal2">font</code> permite establecer de una sola vez los valores para todas las propiedades tipográficas en la hoja de estilo.
+                </p>
+                <p>
+                    El orden de los valores es: <code class="terminal2">font-style</code> <code class="terminal2">font-variant</code> <code class="terminal2">font-weight</code> <strong><code class="terminal2">font-size</code></strong> <strong><code class="terminal2">font-family</code></strong>.
+                </p>
+                <p><strong>Nota:</strong> Las partes <em>font-size</em> y <em>font-family</em> son obligatorias. </p>
+
+                <pre class="terminal"><code>h1 {
+    font: bold 20px verdana, sans-serif;
+}  
+
+h2 {
+    font: bold 14px verdana, sans-serif;
+}</code></pre>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="estilos" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Estilo y Variante</h2>
+                
+                <h3>Font-style</h3>
+                <p>Permite definir el aspecto de una familia tipográfica.</p>
+                <ul>
+                    <li><code class="terminal2">normal</code>: Texto normal.</li>
+                    <li><code class="terminal2">italic</code>: Texto en cursiva.</li>
+                    <li><code class="terminal2">oblique</code>: Texto oblicuo (similar a cursiva).</li>
+                </ul>
+
+                <div style="background-color: #f9fafb; padding: 1rem; border: 1px solid #e5e7eb; border-radius: 8px;">
+                    <p style="font-style: normal;">Párrafo Normal</p>
+                    <p style="font-style: italic;">Párrafo en Italic</p>
+                    <p style="font-style: oblique;">Párrafo en Oblique</p>
+                </div>
+
+                <h3>Font-variant</h3>
+                <p>Selecciona entre el aspecto normal y versalitas (mayúsculas pequeñas).</p>
+                <ul>
+                    <li><code class="terminal2">normal</code></li>
+                    <li><code class="terminal2">small-caps</code>: Transforma las minúsculas en mayúsculas de menor tamaño.</li>
+                </ul>
+                
+                <div style="background-color: #f9fafb; padding: 1rem; border: 1px solid #e5e7eb; border-radius: 8px;">
+                    <p style="font-variant: normal;">My name is Hege Refsnes (Normal)</p>
+                    <p style="font-variant: small-caps;">My name is Hege Refsnes (Small-caps)</p>
+                </div>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="peso" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Grosor de Fuente (Font-weight)</h2>
+                <p>Especifica el "peso" o grosor de la letra.</p>
+                <ul>
+                    <li><code class="terminal2">normal</code>: Equivalente a 400.</li>
+                    <li><code class="terminal2">bold</code>: Negrita, equivalente a 700.</li>
+                    <li><code class="terminal2">lighter</code> / <code class="terminal2">bolder</code>: Más fino o más grueso que el elemento padre.</li>
+                    <li><code class="terminal2">100 - 900</code>: Valores numéricos para mayor precisión.</li>
+                </ul>
+
+                <div style="background-color: #f9fafb; padding: 1rem; border: 1px solid #e5e7eb; border-radius: 8px;">
+                    <p style="font-weight: lighter;">Texto Lighter (Fino)</p>
+                    <p style="font-weight: normal;">Texto Normal (400)</p>
+                    <p style="font-weight: bold;">Texto Bold (Negrita)</p>
+                    <p style="font-weight: 900;">Texto 900 (Extra Bold)</p>
+                </div>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="tamano" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Tamaño de Fuente (Font-size)</h2>
+                <p>
+                    Permite establecer el tamaño del texto. Se pueden usar unidades de medida (<code class="terminal2">px</code>, <code class="terminal2">em</code>, <code class="terminal2">%</code>) o palabras clave.
+                </p>
+
+                <h3>Tamaños Absolutos (Keywords)</h3>
+                <div style="background-color: #f9fafb; padding: 1rem; border: 1px solid #e5e7eb; border-radius: 8px;">
+                    <p style="font-size: xx-small;">xx-small: Lorem ipsum</p>
+                    <p style="font-size: x-small;">x-small: Lorem ipsum</p>
+                    <p style="font-size: small;">small: Lorem ipsum</p>
+                    <p style="font-size: medium;">medium: Lorem ipsum</p>
+                    <p style="font-size: large;">large: Lorem ipsum</p>
+                    <p style="font-size: x-large;">x-large: Lorem ipsum</p>
+                    <p style="font-size: xx-large;">xx-large: Lorem ipsum</p>
+                </div>
+
+                <h3>Tamaños Relativos</h3>
+                <p>
+                    Se usan palabras clave como <code class="terminal2">larger</code> y <code class="terminal2">smaller</code>. La referencia para calcular el tamaño es la letra del elemento contenedor (padre).
+                </p>
+            </section>
+
+            <section id="familia" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Familia Tipográfica (Font-family)</h2>
+                <p>
+                    Establece el tipo de letra. Se puede indicar una lista de fuentes alternativas separadas por comas (Stack). El navegador intentará usar la primera; si no la tiene, probará la segunda, y así sucesivamente.
+                </p>
+
+                <pre class="terminal"><code>body {
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+
+p { 
+    font-family: Georgia, Cambria, Times, serif;
+}</code></pre>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="color-texto" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Color de Texto</h2>
+                <p>
+                    La propiedad <code class="terminal2">color</code> define el color del texto. Se pueden usar nombres predefinidos, valores Hexadecimales o RGB.
+                </p>
+
+                <pre class="terminal"><code>h1 { color: Tomato; }
+p.azul { color: DodgerBlue; }
+p.verde { color: MediumSeaGreen; }</code></pre>
+
+                <div style="background-color: #f9fafb; padding: 1rem; border: 1px solid #e5e7eb; border-radius: 8px; margin-top: 1rem;">
+                    <h3 style="color: Tomato; margin: 0;">Hello World (Tomato)</h3>
+                    <p style="color: DodgerBlue; font-weight: bold;">Lorem Ipsum (DodgerBlue)</p>
+                    <p style="color: MediumSeaGreen; font-weight: bold;">Ut wisi enim... (MediumSeaGreen)</p>
+                </div>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="color-borde" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Color de Borde</h2>
+                <p>
+                    También puedes establecer colores para los bordes utilizando la propiedad <code class="terminal2">border</code> o <code class="terminal2">border-color</code>.
+                </p>
+
+                <pre class="terminal"><code>h2.Tomato { border: 2px solid Tomato; }
+h2.DodgerBlue { border: 2px solid DodgerBlue; }
+h2.Violet { border: 2px solid Violet; }</code></pre>
+
+                <div style="background-color: #f9fafb; padding: 1rem; border: 1px solid #e5e7eb; border-radius: 8px; margin-top: 1rem;">
+                    <h3 style="border: 2px solid Tomato; padding: 5px; display: inline-block; margin-right: 10px; color: #333;">Lorem</h3>
+                    <h3 style="border: 2px solid DodgerBlue; padding: 5px; display: inline-block; margin-right: 10px; color: #333;">Ipsum</h3>
+                    <h3 style="border: 2px solid Violet; padding: 5px; display: inline-block; color: #333;">Eruwe</h3>
+                </div>
+            </section>
+
+        </article>
+
+    </div>
+  <footer>
+        <p>Integrantes del Equipo:</p>
+        <p><strong>Elias Oziel Sanchez Fernandez</strong> | <strong>Juan Pablo Rios Gomez</strong></p>
+        <br>
+        <a href="../contacto.html" style="color: #f3f4f6; text-decoration: underline;">comentarios y contacto</a>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assest/CSS/estilosPrincipal.css">
+
+    <title>Listas</title>
+</head>
+
+<body>
+        
+    <header class="header-principal">
+
+        <div class="logo">
+            <img src="../../assest/IMG/LogoBUAPB.png" alt="logo BUAP"> 
+        </div>
+
+        <h1>Aplicaciones Web</h1>
+
+    </header>
+
+    <nav class="nav-principal">
+        
+        <a href="../HTML.html">HTML</a>
+        <a href="../CSS.html">CSS</a>
+        <a href="../../Index.html">Página Principal</a>
+
+    </nav>
+     
+    
+    <div class="layout-contenido">
+
+        <aside class="sidebar-curso">
+            <h3>Índice del Tema</h3>
+            <ul>
+                <li><a href="#intro">Introducción</a></li>
+                <li><a href="#no-ordenadas">Listas No Ordenadas (&lt;ul&gt;)</a></li>
+                <li><a href="#ordenadas">Listas Ordenadas (&lt;ol&gt;)</a></li>
+            </ul>
+        </aside>
+
+        <article class="detalle-texto">
+
+            <section id="intro" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h1>Listas en HTML</h1>
+                <p>
+                    Las listas son esenciales para organizar información de manera estructurada. HTML nos ofrece principalmente dos tipos: listas donde el orden no importa (con viñetas) y listas donde el orden es secuencial (con números).
+                </p>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="no-ordenadas" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Listas No Ordenadas <code>&lt;ul&gt;</code></h2>
+                <p>
+                    Las listas no ordenadas van dentro de la etiqueta <code class="terminal2">&lt;ul&gt;</code> y su cierre <code class="terminal2">&lt;/ul&gt;</code>.
+                    Cada punto que queramos añadir a la lista lo haremos dentro de la etiqueta <code class="terminal2">&lt;li&gt;</code> (List Item).
+                </p>
+                
+                <h3>Atributo Type</h3>
+                <p>
+                    Si no le indicamos nada a la etiqueta, esta generará un punto (bullet) de forma automática. Pero si queremos definir nosotros mismos el símbolo, podemos hacerlo gracias al atributo <code class="terminal2">type</code> en la etiqueta <code>&lt;li&gt;</code> (aunque actualmente se prefiere hacerlo con CSS, este atributo es parte de la especificación clásica).
+                </p>
+                <ul>
+                    <li><code class="terminal2">type="disc"</code>: Un punto lleno (por defecto).</li>
+                    <li><code class="terminal2">type="circle"</code>: Un punto hueco (fondo blanco).</li>
+                    <li><code class="terminal2">type="square"</code>: Un cuadrado.</li>
+                </ul>
+
+                <div style="background-color: #f9fafb; padding: 1rem; border-left: 4px solid var(--accent-color); margin: 1rem 0;">
+                    <strong>Ejemplo de Código:</strong>
+                    <pre class="terminal" style="margin-top: 0.5rem;"><code>&lt;ul&gt;
+    &lt;li type="circle"&gt;Este es un punto hueco&lt;/li&gt;
+    &lt;li type="disc"&gt;Este es un punto lleno&lt;/li&gt;
+    &lt;li type="square"&gt;Este es un cuadrado&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                    
+                    <p><strong>Resultado Visual:</strong></p>
+                    <ul style="margin-left: 2rem;">
+                        <li type="circle">Este es un punto hueco</li>
+                        <li type="disc">Este es un punto lleno</li>
+                        <li type="square">Este es un cuadrado</li>
+                    </ul>
+                </div>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="ordenadas" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Listas Ordenadas <code>&lt;ol&gt;</code></h2>
+                <p>
+                    Las listas ordenadas van enmarcadas dentro de las etiquetas <code class="terminal2">&lt;ol&gt;</code> y <code class="terminal2">&lt;/ol&gt;</code>.
+                    Cada punto de la lista se escribe con la misma etiqueta que en las no numeradas: <code class="terminal2">&lt;li&gt;</code>.
+                </p>
+                <p>
+                    Al ser listas ordenadas, los símbolos serán números y estos se irán generando <strong>automáticamente por orden</strong> conforme escribamos nuevos puntos.
+                </p>
+
+                <h3>Atributo Value</h3>
+                <p>
+                    Podemos hacer que un punto específico comience con el número que nosotros queramos gracias al atributo <code class="terminal2">value</code>. Los siguientes puntos se generarán automáticamente partiendo de ese número.
+                </p>
+
+                <div style="background-color: #f9fafb; padding: 1rem; border-left: 4px solid var(--accent-color); margin: 1rem 0;">
+                    <strong>Ejemplo: Iniciar la cuenta en 20</strong>
+                    <pre class="terminal" style="margin-top: 0.5rem;"><code>&lt;ol&gt;
+    &lt;li value="20"&gt;Este número será 20&lt;/li&gt;
+    &lt;li&gt;Este número será 21&lt;/li&gt;
+    &lt;li&gt;Este número será 22&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                    
+                    <p><strong>Resultado Visual:</strong></p>
+                    <ol>
+                        <li value="20">Este número será 20</li>
+                        <li>Este número será 21</li>
+                        <li>Este número será 22</li>
+                    </ol>
+                </div>
+            </section>
+
+        </article>
+
+    </div>
+
+     <footer>
+        <p>Integrantes del Equipo:</p>
+        <p><strong>Elias Oziel Sanchez Fernandez</strong> | <strong>Juan Pablo Rios Gomez</strong></p>
+        <br>
+        <a href="../contacto.html" style="color: #f3f4f6; text-decoration: underline;">comentarios y contacto</a>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assest/CSS/estilosPrincipal.css">
+
+    <title>Unidades de Medida</title>
+</head>
+
+<body>
+        
+    <header class="header-principal">
+
+        <div class="logo">
+            <img src="../../assest/IMG/LogoBUAPB.png" alt="logo BUAP"> 
+        </div>
+
+        <h1>Aplicaciones Web</h1>
+
+    </header>
+
+    <nav class="nav-principal">
+        
+        <a href="../HTML.html">HTML</a>
+        <a href="../CSS.html">CSS</a>
+        <a href="../../Index.html">Página Principal</a>
+
+    </nav>
+     
+     
+   <div class="layout-contenido">
+
+        <aside class="sidebar-curso">
+            <h3>Índice del Tema</h3>
+            <ul>
+                <li><a href="#intro">Introducción</a></li>
+                <li><a href="#absolutas">Unidades Absolutas</a></li>
+                <li><a href="#relativas">Unidades Relativas</a></li>
+                <li><a href="#viewport">Viewport Units</a></li>
+            </ul>
+        </aside>
+
+        <article class="detalle-texto">
+
+            <section id="intro" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h1>Unidades de Medida en CSS</h1>
+                <p>
+                    Las medidas en CSS se emplean para definir la altura, anchura, márgenes de los elementos y para establecer el tamaño de letra. Todas las medidas se indican como un valor numérico seguido de una unidad.
+                </p>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="absolutas" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Unidades Absolutas</h2>
+                <p>
+                    Las unidades absolutas establecen de forma fija el valor de una medida. Su valor real es directamente el valor indicado y no cambia según el contexto.
+                </p>
+
+                <div style="background-color: #f9fafb; padding: 1rem; border: 1px solid #e5e7eb; border-radius: 8px;">
+                    <ul>
+                        <li><code class="terminal2">px</code>: Píxeles (la más común en pantallas).</li>
+                        <li><code class="terminal2">pt</code>: Puntos (usado comúnmente en impresión).</li>
+                        <li><code class="terminal2">cm</code>: Centímetros.</li>
+                        <li><code class="terminal2">mm</code>: Milímetros.</li>
+                        <li><code class="terminal2">in</code>: Pulgadas.</li>
+                    </ul>
+                </div>
+
+                <pre class="terminal"><code>h1 { font-size: 24px; }
+div { width: 10cm; }</code></pre>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="relativas" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Unidades Relativas</h2>
+                <p>
+                    Las unidades relativas no están completamente definidas por sí mismas; su valor siempre se calcula referenciado respecto a otro valor. Son fundamentales para el <strong>Diseño Responsivo</strong>.
+                </p>
+
+                <h3>1. Relativas al Contenedor (%)</h3>
+                <p>
+                    El porcentaje <code class="terminal2">%</code> se calcula en base al tamaño del elemento padre (contenedor directo).
+                </p>
+                <pre class="terminal"><code>.hijo { width: 50%; } /* Ocupa la mitad de su padre */</code></pre>
+
+                <h3>2. Relativas a la Tipografía</h3>
+                <p>Estas unidades se basan en el tamaño de la fuente:</p>
+                <ul>
+                    <li>
+                        <strong><code class="terminal2">em</code></strong>: Basada en la anchura/tamaño de la letra del elemento actual (o del padre si se usa en font-size).
+                    </li>
+                    <li>
+                        <strong><code class="terminal2">rem</code></strong>: Basada en el tamaño de letra del elemento raíz (<code>html</code>). Es más predecible que <em>em</em>.
+                    </li>
+                    <li>
+                        <strong><code class="terminal2">ex</code></strong>: Basada en la altura de la letra 'x' minúscula.
+                    </li>
+                </ul>
+
+                <div style="background-color: #f9fafb; padding: 1rem; border-left: 4px solid var(--accent-color); margin: 1rem 0;">
+                    <strong>Diferencia EM vs REM:</strong>
+                    <p>Si el navegador tiene un tamaño base de 16px:</p>
+                    <ul>
+                        <li><code>1rem</code> = 16px (Siempre).</li>
+                        <li><code>2em</code> en un elemento con fuente de 10px = 20px.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="viewport" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Relativas al Viewport (Pantalla)</h2>
+                <p>
+                    Estas unidades se basan en el tamaño de la ventana visible del navegador (Viewport).
+                </p>
+                
+
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 1rem; background-color: white; border: 1px solid #ddd;">
+                        <thead>
+                            <tr style="background-color: var(--secondary-bg-color); color: white;">
+                                <th style="padding: 10px; text-align: left;">Unidad</th>
+                                <th style="padding: 10px; text-align: left;">Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody style="color: #333;">
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 8px;"><code class="terminal2">vw</code></td>
+                                <td style="padding: 8px;">1% de la <strong>anchura</strong> del viewport.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 8px;"><code class="terminal2">vh</code></td>
+                                <td style="padding: 8px;">1% de la <strong>altura</strong> del viewport.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 8px;"><code class="terminal2">vmin</code></td>
+                                <td style="padding: 8px;">Toma el valor <strong>mínimo</strong> entre la altura y la anchura.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 8px;"><code class="terminal2">vmax</code></td>
+                                <td style="padding: 8px;">Toma el valor <strong>máximo</strong> entre la altura y la anchura.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="margin-top: 1.5rem;">
+                    <strong>Ejemplo de uso (Pantalla completa):</strong>
+                    <pre class="terminal"><code>.hero-section {
+    width: 100vw;
+    height: 100vh; /* Ocupa toda la pantalla siempre */
+}</code></pre>
+                </div>
+            </section>
+
+        </article>
+
+    </div>
+
+     <footer>
+        <p>Integrantes del Equipo:</p>
+        <p><strong>Elias Oziel Sanchez Fernandez</strong> | <strong>Juan Pablo Rios Gomez</strong></p>
+        <br>
+        <a href="../contacto.html" style="color: #f3f4f6; text-decoration: underline;">comentarios y contacto</a>
+    </footer>
+    
+
+</body>
+</html>

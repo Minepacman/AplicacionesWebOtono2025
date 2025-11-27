@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assest/CSS/estilosPrincipal.css">
+
+    <title>Hipervínculos</title>
+</head>
+
+<body>
+        
+  <header class="header-principal">
+
+        <div class="logo">
+            <img src="../../assest/IMG/LogoBUAPB.png" alt="logo BUAP"> 
+        </div>
+
+        <h1>Aplicaciones Web</h1>
+
+    </header>
+
+    <nav class="nav-principal">
+        
+        <a href="../HTML.html">HTML</a>
+        <a href="../CSS.html">CSS</a>
+        <a href="../../Index.html">Página Principal</a>
+
+    </nav>
+     
+     
+   <div class="layout-contenido">
+
+        <aside class="sidebar-curso">
+            <h3>Índice del Tema</h3>
+            <ul>
+                <li><a href="#intro">Etiqueta &lt;a&gt;</a></li>
+                <li><a href="#referencias">Tipos de Referencias</a></li>
+                <li><a href="#formato">Formato </a></li>
+                <li><a href="#anclas">Puntos de Fijación</a></li>
+                <li><a href="#target">Destino/a></li>
+                <li><a href="#otros">Correo y Descargas</a></li>
+            </ul>
+        </aside>
+
+        <article class="detalle-texto">
+
+            <section id="intro" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h1>Enlaces y la etiqueta <code>&lt;a&gt;</code></h1>
+                <p>
+                    Un enlace, hipervínculo o vínculo, es un elemento que al ser pulsado lleva a una página o archivo. Aquellos elementos (Texto, imágenes, etc.) sobre los que se desee insertar un enlace han de encontrarse entre las etiquetas <code class="terminal2">&lt;a&gt;</code> y <code class="terminal2">&lt;/a&gt;</code>.
+                </p>
+                <p>
+                    A través del atributo <code class="terminal2">href</code> se especifica la página a la que está asociado el enlace, es decir, la página que se visualizará cuando el usuario haga click.
+                </p>
+
+                <div style="background-color: #f9fafb; padding: 1rem; border-left: 4px solid var(--accent-color); margin: 1rem 0;">
+                    <strong>Ejemplo:</strong>
+                    <pre class="terminal" style="margin-top: 0.5rem;"><code>&lt;a href="https.cs.buap.mx"&gt; Visita la FCC &lt;/a&gt;</code></pre>
+
+                    <p><strong>Resultado visual:</strong></p>
+
+                    <p style="background: white; padding: 10px; border: 1px solid #ddd;">
+                        <a href="https://www.cs.buap.mx/"> Visita la FCC </a>
+                    </p>
+                    
+                </div>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="referencias" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Referencias Absolutas vs Relativas</h2>
+                <p>Existen diferentes formas de expresar una referencia a través del atributo <code class="terminal2">href</code>:</p>
+
+                <h3>1. Referencia Absoluta</h3>
+                <p>
+                    Conduce a una ubicación externa al sitio. La ubicación es en internet; en este caso hay que empezar la referencia por <strong>http://</strong>, el nombre del dominio y algunas veces el nombre de la página.
+                </p>
+
+                <h3>2. Referencia Relativa a Sitios</h3>
+                <p>
+                    Conduce a un documento situado dentro del mismo sitio, partiendo de la <strong>carpeta raíz</strong>. Se identifica porque aparece el símbolo <code class="terminal2">/</code> delante del nombre.
+                </p>
+                <pre class="terminal"><code>&lt;a href="/t_4_1.html"&gt; Enlace a Tema &lt;/a&gt;</code></pre>
+                <p>
+                    Si el documento estuviera dentro de una carpeta llamada <em>tema4</em> dentro de la raíz:
+                </p>
+                <pre class="terminal"><code>&lt;a href="/tema4/t_4_1.html"&gt; Enlace a Tema &lt;/a&gt;</code></pre>
+
+                <h3>3. Referencia Relativa al Documento</h3>
+                <p>
+                    Conduce a un documento situado dentro del mismo sitio, pero partiendo del directorio en el que se encuentra el documento actual. <strong>No aparece el símbolo / al inicio.</strong>
+                </p>
+                
+                <p>Ejemplo de estructura de carpetas:</p>
+                <pre class="terminal">root:www
+    - Otra
+      - obj.html
+    - P1
+        - P2
+            - P3
+                 - Act.html</pre>
+
+                <p>Si el archivo destino está en la misma carpeta:</p>
+                <pre class="terminal"><code>&lt;a href="documento.html"&gt; Enlace directo &lt;/a&gt;</code></pre>
+
+                <p>Si está en una subcarpeta llamada <em>tema4</em>:</p>
+                <pre class="terminal"><code>&lt;a href="tema4/t_4_1.html"&gt; Enlace a subcarpeta &lt;/a&gt;</code></pre>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="formato" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Formato de Enlaces</h2>
+                <p>
+                    Los colores de los vínculos pueden especificarse en la etiqueta <code class="terminal2">&lt;body&gt;</code> mediante atributos:
+                </p>
+                <ul>
+                    <li><strong>link:</strong> Color de enlaces sin visitar.</li>
+                    <li><strong>alink:</strong> Color del enlace activo (al pulsar).</li>
+                    <li><strong>vlink:</strong> Color de enlaces visitados.</li>
+                </ul>
+                <pre class="terminal"><code>&lt;body link="#F00" vlink="#F09" alink="#F90"&gt;</code></pre>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="anclas" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Puntos de fijación (Anclas)</h2>
+                <p>
+                    Cuando se tienen documentos extensos, es preferible ir directamente al apartado deseado. Para ello se utilizan las anclas.
+                </p>
+
+                <h3>Paso 1: Crear el ancla</h3>
+                <p>
+                    Se utiliza el atributo <code class="terminal2">name</code>. No es necesario insertar nada entre las etiquetas.
+                </p>
+                <pre class="terminal"><code>&lt;a name='miancla'&gt;Texto ancla&lt;/a&gt;</code></pre>
+
+                <h3>Paso 2: Enlazar al ancla</h3>
+                <p>
+                    El vínculo debe ser <code>nombre_del_documento#nombre_de_punto</code>. Si el ancla está en la misma página, se puede omitir el nombre del documento.
+                </p>
+                <pre class="terminal"><code>&lt;!-- Enlace en la misma página --&gt;
+&lt;a href="#miancla"&gt;Enlace al ancla&lt;/a&gt;
+
+&lt;!-- Enlace desde otra página --&gt;
+&lt;a href="t_4_3.html#miancla"&gt;Enlace externo al ancla&lt;/a&gt;</code></pre>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="target" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Destino del enlace (Target)</h2>
+                <p>
+                    El atributo <code class="terminal2">target</code> determina en qué ventana va a ser abierta la página vinculada.
+                </p>
+                <ul>
+                    <li><code class="terminal2">_blank</code>: Abre el documento en una ventana nueva.</li>
+                    <li><code class="terminal2">_self</code>: Opción predeterminada. Abre en la misma ventana.</li>
+                    <li><code class="terminal2">_parent</code>: Abre en el marco padre.</li>
+                    <li><code class="terminal2">_top</code>: Abre en la ventana completa del navegador.</li>
+                </ul>
+
+                <p>Es interesante usar <code class="terminal2">_blank</code> cuando la página de destino está fuera de nuestro sitio.</p>
+                <pre class="terminal"><code>&lt;a href="https://www.buap.mx/" target="_blank"&gt;Visita la BUAP&lt;/a&gt;</code></pre>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="otros" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Otros tipos de enlaces</h2>
+
+                <h3>Correo Electrónico</h3>
+                <p>
+                    Abre la aplicación de correo electrónico. La referencia debe ser <code class="terminal2">mailto:</code>.
+                </p>
+                <pre class="terminal"><code>&lt;a href="mailto:webmaster.ri@correo.buap.mx"&gt;Enviar e-mail&lt;/a&gt;</code></pre>
+                
+                <p>Podemos pre-rellenar el asunto (subject):</p>
+                <pre class="terminal"><code>&lt;a href="mailto:a@a.com?subject=El Asunto"&gt;Correo con asunto&lt;/a&gt;</code></pre>
+
+                <h3>Archivos para descarga</h3>
+                <p>
+                    Si el atributo <code class="terminal2">href</code> apunta a un fichero comprimido, documento Word, Excel, etc., el navegador pedirá permiso para descargarlo.
+                </p>
+                <pre class="terminal"><code>&lt;a href="carta.doc" target="_blank"&gt;Descargar fichero&lt;/a&gt;</code></pre>
+
+                <h3>Vínculo vacío</h3>
+                <p>
+                    Útil para comportamientos JavaScript. No abre ninguna página.
+                </p>
+                <pre class="terminal"><code>&lt;a href="#"&gt; Vínculo Vacío &lt;/a&gt;</code></pre>
+            </section>
+
+        </article>
+
+    </div>
+
+      <footer>
+        <p>Integrantes del Equipo:</p>
+        <p><strong>Elias Oziel Sanchez Fernandez</strong> | <strong>Juan Pablo Rios Gomez</strong></p>
+        <br>
+        <a href="../contacto.html" style="color: #f3f4f6; text-decoration: underline;">comentarios y contacto</a>
+    </footer>
+    
+
+</body>
+</html>

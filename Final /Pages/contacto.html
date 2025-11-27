@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assest/CSS/estilosPrincipal.css">
+    <title>Contacto y Comentarios</title>
+</head>
+
+<body>
+        
+    <header class="header-principal">
+        <div class="logo">
+            <img src="../assest/IMG/LogoBUAPB.png" alt="logo BUAP"> 
+        </div>
+        <h1>Aplicaciones Web</h1>
+    </header>
+
+    <nav class="nav-principal">
+        <a href="HTML.html">HTML</a>
+        <a href="CSS.html">CSS</a>
+        <a href="../Index.html">Página Principal</a>
+    </nav>
+     
+    <section class="contact-section">
+        
+        <div class="dark-form-container">
+            <h2>Formulario de Evaluación</h2>
+            <p>Aplicando los conceptos de <code>&lt;form&gt;</code> vistos en clase.</p>
+
+            <form action="mailto:elias.sanchezf@alumno.buap.mx" method="post" enctype="text/plain">
+                
+                <label for="nombre">Nombre Completo (Max 30 caracteres):</label>
+                <input type="text" id="nombre" name="nombre" size="30" maxlength="30" placeholder="Tu nombre aquí..." required>
+
+                <label for="clave">Clave de Acceso / Matrícula (Oculta):</label>
+                <input type="password" id="clave" name="clave" maxlength="10" placeholder="••••••••">
+
+                <label for="utilidad">¿Qué tan útil fue la página?</label>
+                <select name="utilidad" id="utilidad">
+                    <option value="" disabled selected>--- Selecciona una opción ---</option>
+                    <option value="alta">Alta - Me sirvió mucho</option>
+                    <option value="media">Media - Regular</option>
+                    <option value="baja">Baja - Falta contenido</option>
+                </select>
+
+                <label>¿Eres estudiante de la BUAP?</label>
+                <div class="form-group-inline">
+                    <label><input type="radio" name="es_estudiante" value="Si" checked> Sí</label>
+                    <label><input type="radio" name="es_estudiante" value="No"> No</label>
+                </div>
+
+                <label for="comentario">Comentarios o Sugerencias:</label>
+                <textarea id="comentario" name="comentario" rows="4" cols="30" placeholder="Escribe aquí..."></textarea>
+
+                <label for="evidencia">Adjuntar Captura (Opcional):</label>
+                <input type="file" id="evidencia" name="adjunto">
+
+                <input type="hidden" name="origen_formulario" value="pagina_contacto_v1">
+
+                <div class="form-group-inline" style="margin-top: 10px;">
+                    <label>
+                        <input type="checkbox" name="terminos" value="acepto"> 
+                        He leído y acepto enviar esta información.
+                    </label>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="reset" class="btn-reset" value="Borrar todo">Restablecer</button>
+                    <button type="submit" class="btn-primary" value="Enviar Datos">Enviar Formulario</button>
+                </div>
+
+            </form>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>Integrantes del Equipo:</p>
+        <p><strong>Elias Oziel Sanchez Fernandez</strong> | <strong>Juan Pablo Rios Gomez</strong></p>
+        <br>
+        <a href="contacto.html" style="color: #f3f4f6; text-decoration: underline;">comentarios y contacto</a>
+    </footer>
+    
+</body>
+</html>

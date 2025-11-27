@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assest/CSS/estilosPrincipal.css">
+    <title>HTML: Introducción y Estructura</title>
+</head>
+
+<body>
+        
+   <header class="header-principal">
+
+        <div class="logo">
+            <img src="../../assest/IMG/LogoBUAPB.png" alt="logo BUAP"> 
+        </div>
+
+        <h1>Aplicaciones Web</h1>
+
+    </header>
+
+    <nav class="nav-principal">
+        
+        <a href="../HTML.html">HTML</a>
+        <a href="../CSS.html">CSS</a>
+        <a href="../../Index.html">Página Principal</a>
+
+    </nav>
+     
+     
+    <div class="layout-contenido">
+
+       <aside class="sidebar-curso">
+            <h3>Índice del Tema</h3>
+            <ul>
+                <li><a href="#que-es">¿Qué es HTML?</a></li>
+                <li><a href="#tags">Los TAGs</a></li>
+                <li><a href="#body">El Body</a></li>
+                <li><a href="#metadatos">Metadatos y Head</a></li>
+                <li><a href="#link">Recursos </a></li>
+                <li><a href="#colores">Colores en HTML</a></li>
+                <li><a href="#estructurales">Elementos Estructurales</a></li>
+            </ul>
+        </aside>
+
+        <article class="detalle-texto">
+
+            <section id="que-es" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h1>¿Qué es HTML?</h1>
+                <p>
+                    Es más una codificación que un lenguaje de programación. Su estructura básica es tan simple que cualquier persona sin principios en programación puede aprenderlo con gran facilidad.
+                </p>
+                <p>
+                    Lo sorprendente de este lenguaje es que proporciona al usuario la información de manera interactiva, haciendo uso del <strong>Hypertexto</strong> (texto con enlaces hacia otros lugares de la Web o inserciones multimedia). Además, es universal y no depende del sistema operativo que se esté utilizando.
+                </p>
+                <p>
+                    Los documentos <strong>HTML</strong> se escriben en modo <em>ASCII</em>, haciendo uso de cualquier procesador de palabras.
+                </p>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="tags" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Estructura y TAGs</h2>
+                <p>
+                    El <strong>HTML</strong> utiliza una codificación genética que hace uso de <code class="terminal2">TAGs</code> o etiquetas. Mediante estas etiquetas es posible separar el contenido del documento de su formato.
+                </p>
+                <p>
+                    Los <em>TAGs</em> son comandos que se especifican en el cuerpo del programa con el fin de darle las características deseadas a la información.
+                </p>
+            </section>
+
+             <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="body" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Body: Cuerpo del documento</h2>
+                <p>
+                    El cuerpo del documento contiene la información propia del documento, es decir, lo que queremos que se visualice: el texto de la página, las imágenes, los formularios, etc.
+                    Todos estos elementos tienen que encontrarse entre las etiquetas de <code class="terminal2">&lt;body&gt;</code>.
+                </p>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="metadatos" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Metadatos <code>&lt;meta&gt;</code></h2>
+                <p>
+                    La etiqueta <code class="terminal2">&lt;meta&gt;</code> sirve para definir datos sobre el documento que no son visualizados por el navegador, pero son útiles para buscadores. Se incluyen en el encabezado.
+                </p>
+                <ul>
+                    <li><strong>charset:</strong> Establece el conjunto de caracteres (ej. UTF-8).</li>
+                    <li><strong>keywords:</strong> Palabras clave para buscadores.</li>
+                    <li><strong>description:</strong> Descripción del documento.</li>
+                    <li><strong>author:</strong> Nombre del autor.</li>
+                    <li><strong>generator:</strong> Programa con el que se creó el documento.</li>
+                </ul>
+            </section>
+
+            <section id="link" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Recursos Externos <code>&lt;link&gt;</code></h2>
+                <p>
+                    Permite establecer una relación con un documento externo.
+                </p>
+                <pre class="terminal"><code>&lt;link rel="stylesheet" href="estilos.css"&gt;</code></pre>
+                
+                <h3>Atributos importantes:</h3>
+                <ul>
+                    <li><strong>href:</strong> La URL del documento a enlazar.</li>
+                    <li><strong>rel:</strong> Relación con el documento (ej. <em>stylesheet</em>, <em>icon</em>, <em>author</em>, <em>license</em>).</li>
+                    <li><strong>type:</strong> Tipo MIME del documento (ej. <em>text/css</em>).</li>
+                    <li><strong>media:</strong> Dispositivo de destino (<em>screen</em>, <em>print</em>, <em>all</em>).</li>
+                </ul>
+            </section>
+
+            
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+
+
+             <section id="colores" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Colores (Hexadecimal y Nombres)</h2>
+                <p>
+                    En la etiqueta <code class="terminal2">body</code> es posible establecer el color de fondo a través del atributo <code class="terminal2">bgcolor</code>.
+                </p>
+                
+                <h3>Representación Hexadecimal</h3>
+                <p>
+                    Los colores en HTML se representan mediante un número <strong>hexadecimal</strong> que sigue el formato <strong>RGB</strong>. 
+                    Cada color estará representado por un grupo de 6 dígitos precedidos por una almohadilla, por ejemplo: <code class="terminal2">#FFFFFF</code> (Blanco).
+                </p>
+
+                <h3>Representación por Nombre</h3>
+                <p>Existe otra forma de representar colores sin usar números, utilizando sus nombres predefinidos (ej. <em>blue, red, yellow</em>).</p>
+
+                <p><strong>Ejemplo 1: Usando Hexadecimal para fondo azul</strong></p>
+                <pre class="terminal"><code>&lt;html&gt;
+    &lt;body bgcolor="#0000FF"&gt;
+        &lt;p&gt;hola&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                <p><strong>Ejemplo 2: Usando Nombre para fondo azul (Equivalente)</strong></p>
+                <pre class="terminal"><code>&lt;html&gt;
+    &lt;body bgcolor="blue"&gt;
+        &lt;p&gt;hola&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </section>
+
+
+        <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+            
+
+          
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+         <section id="estructurales" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Elementos Estructurales HTML5</h2>
+                <p>Etiquetas para organizar la estructura de la página y agrupar contenido.</p>
+
+                <h3>Contenedores Genéricos</h3>
+                <ul>
+                    <li><strong>&lt;div&gt;:</strong> Contenedor a nivel de bloque. Crea un salto de línea y sirve para agrupar secciones grandes.</li>
+                    <li><strong>&lt;span&gt;:</strong> Contenedor a nivel de línea. No crea saltos, ideal para aplicar estilos a trozos de texto.</li>
+                    <li><strong>&lt;iframe&gt;:</strong> Marco en línea para incrustar otros documentos (mapas, videos) dentro de la página actual.</li>
+                </ul>
+
+                <h3>Etiquetas Semánticas</h3>
+                <p>Dotan de sentido a la estructura del documento:</p>
+                <ul>
+                    <li><strong>&lt;header&gt;:</strong> Encabezado de un documento o sección.</li>
+                    <li><strong>&lt;nav&gt;:</strong> Conjunto de vínculos de navegación.</li>
+                    <li><strong>&lt;section&gt;:</strong> Define secciones como capítulos.</li>
+                    <li><strong>&lt;article&gt;:</strong> Contenido independiente o autónomo (posts, noticias).</li>
+                    <li><strong>&lt;aside&gt;:</strong> Contenido al margen relacionado con el principal.</li>
+                </ul>
+
+                <img src="../../assest/IMG/estructura-etiquetas-html.png" alt="Imagen referente a etiquetas estructurales HTML5" style="max-width: 100%; margin-top: 1rem;">
+            </section>
+
+        </article>
+
+    </div>
+
+      <footer>
+        <p>Integrantes del Equipo:</p>
+        <p><strong>Elias Oziel Sanchez Fernandez</strong> | <strong>Juan Pablo Rios Gomez</strong></p>
+        <br>
+        <a href="../contacto.html" style="color: #f3f4f6; text-decoration: underline;">comentarios y contacto</a>
+    </footer>
+    
+    
+</body>
+</html>

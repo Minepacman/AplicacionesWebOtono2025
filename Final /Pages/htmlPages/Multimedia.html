@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assest/CSS/estilosPrincipal.css">
+
+    <title>Multimedia</title>
+</head>
+
+<body>
+        
+   <header class="header-principal">
+        <div class="logo">
+            <img src="../../assest/IMG/LogoBUAPB.png" alt="logo BUAP"> 
+        </div>
+        <h1>Aplicaciones Web</h1>
+    </header>
+
+    <nav class="nav-principal">
+        <a href="../HTML.html">HTML</a>
+        <a href="../CSS.html">CSS</a>
+        <a href="../../Index.html">Página Principal</a>
+    </nav>
+     
+    <div class="layout-contenido">
+
+      <aside class="sidebar-curso">
+            <h3>Índice del Tema</h3>
+            <ul>
+                <li><a href="#imagenes">Insertar Imágenes</a></li>
+                <li><a href="#alt">Texto Alternativo (alt)</a></li>
+                <li><a href="#enlaces-img">Imágenes como Enlaces</a></li>
+                <li><a href="#video">Video HTML5</a></li>
+            </ul>
+        </aside>
+
+        <article class="detalle-texto">
+
+            <section id="imagenes" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h1>Imágenes en HTML</h1>
+                <p>
+                    Todas las páginas web acostumbran a tener un cierto número de imágenes, que permiten mejorar su apariencia o dotarla de una mayor información visual.
+                </p>
+                <p>
+                    Para insertar una imagen es necesario utilizar la etiqueta <code class="terminal2">&lt;img&gt;</code>. <strong>Dicha etiqueta no necesita etiqueta de cierre.</strong>
+                </p>
+                
+                <h3>Atributo src</h3>
+                <p>
+                    El nombre y ubicación de la imagen ha de especificarse a través del atributo <code class="terminal2">src</code> (source/origen).
+                </p>
+
+                <div style="background-color: #f9fafb; padding: 1rem; border-left: 4px solid var(--accent-color); margin: 1rem 0;">
+                    <strong>Sintaxis:</strong>
+                    <pre class="terminal" style="margin-top: 0.5rem;"><code>&lt;figure&gt;
+    &lt;img src="imagenes/robot.gif"&gt;
+&lt;/figure&gt;</code></pre>
+                    
+                    <p><strong>Resultado Visual (Ejemplo):</strong></p>
+                    <figure>
+                        <img src="../../assest/IMG/LogoBUAP.png" alt="Logo BUAP" style="max-width: 200px;">
+                        <figcaption>Figura 1: Ejemplo de inserción de imagen</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="alt" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Texto Alternativo (alt)</h2>
+                <p>
+                    Cuando una imagen no puede ser visualizada en el navegador (cosa que puede ocurrir al especificar mal el valor del atributo <code>src</code> o si el archivo fue borrado), normalmente aparece un recuadro blanco con una X roja o un icono de imagen rota.
+                </p>
+                <p>
+                    Podemos hacer que en lugar de mostrarse el error, aparezca un texto descriptivo gracias al atributo <code class="terminal2">alt</code>.
+                </p>
+
+                <div style="background-color: #f9fafb; padding: 1rem; border-left: 4px solid var(--accent-color); margin: 1rem 0;">
+                    <strong>Ejemplo con error intencional:</strong>
+                    <p>Imagina que deseamos mostrar una imagen llamada <em>gatito.gif</em> con el texto alternativo "Imagen gato", pero la imagen no existe en la carpeta.</p>
+                    
+                    <pre class="terminal" style="margin-top: 0.5rem;"><code>&lt;img src="imagenes/gatito.gif" alt="Imagen gato"&gt;</code></pre>
+                    
+                    <p><strong>Resultado Visual (Así se ve el atributo alt):</strong></p>
+                    <div style="padding: 20px; border: 1px dashed #ccc; display: inline-block;">
+                        <img src="ruta_incorrecta/gatito.gif" alt="Imagen gato">
+                    </div>
+                </div>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="enlaces-img" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Imágenes como Enlaces</h2>
+                <p>
+                    Como ya conocemos los hipervínculos y cómo insertar imágenes, podemos implementar un hipervínculo que, en vez de mostrar un texto subrayado, muestre una imagen clicable.
+                </p>
+                <p>
+                    La solución es simple y consiste en disponer la etiqueta <code class="terminal2">&lt;img&gt;</code> encerrada entre la marca de comienzo y fin del enlace <code class="terminal2">&lt;a&gt;</code>.
+                </p>
+
+                <div style="background-color: #f9fafb; padding: 1rem; border-left: 4px solid var(--accent-color); margin: 1rem 0;">
+                    <strong>Ejemplo:</strong>
+                    <p>Generamos un ejercicio que muestre una imagen que, al ser presionada, realice un salto a otra página.</p>
+
+                    <pre class="terminal" style="margin-top: 0.5rem;"><code>&lt;a href="pagina2.html"&gt;
+    &lt;img src="imagenes/foto1.jpg" alt="Pintura Geométrica"&gt;
+&lt;/a&gt;</code></pre>
+                    
+                    <p><strong>Resultado Visual (Pasa el mouse por encima):</strong></p>
+                    
+                    <a href="https://www.buap.mx/">
+                        <img src="../../assest/IMG/LogoBUAP.png" alt="Logo Enlace" style="max-width: 150px; border: 2px solid transparent; transition: border-color 0.3s;" onmouseover="this.style.borderColor='#ff30b3'" onmouseout="this.style.borderColor='transparent'">
+                    </a>
+                    <p style="font-size: 0.9rem; color: #666;">(Haz click en la imagen para probar)</p>
+                </div>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="video" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Video HTML5 <code>&lt;video&gt;</code></h2>
+                <p>
+                    Permite reproducir archivos de video (MP4, WebM, Ogg). Se usa la etiqueta <code class="terminal2">&lt;video&gt;</code> junto con <code class="terminal2">&lt;source&gt;</code> para definir el archivo.
+                </p>
+                
+                <h3>Atributos Principales:</h3>
+                <ul>
+                    <li><strong>controls:</strong> Muestra botones de play, pausa, volumen.</li>
+                    <li><strong>autoplay:</strong> Reproduce el video automáticamente al cargar.</li>
+                    <li><strong>loop:</strong> Reproduce en bucle infinito.</li>
+                    <li><strong>muted:</strong> Silencia el video.</li>
+                    <li><strong>poster:</strong> Imagen previa antes de reproducir.</li>
+                    <li><strong>width / height:</strong> Dimensiones del reproductor.</li>
+                </ul>
+
+                <pre class="terminal"><code>&lt;video width="320" height="240" controls&gt;
+    &lt;source src="pelicula.mp4" type="video/mp4"&gt;
+    &lt;source src="pelicula.ogg" type="video/ogg"&gt;
+    Tu navegador no soporta video.
+&lt;/video&gt;</code></pre>
+
+                <p>
+                    En este ejemplo, el video se mostrará con controles, y si el navegador no soporta la etiqueta <code class="terminal2">&lt;video&gt;</code>, se mostrará el texto alternativo.
+                </p>
+                <video width="320" height="240" controls>
+                    <source src="../../assest/video/Rick Astley - Never Gonna Give You Up [HQ] - AllKindsOfStuff (720p, h264).mp4" type="video/mp4">
+                    <source src="../../assest/video/Rick Astley - Never Gonna Give You Up [HQ] - AllKindsOfStuff (720p, h264).ogg" type="video/ogg">
+                    Tu navegador no soporta video.
+                </video>
+            </section>
+
+        </article>
+
+    </div>
+
+    <footer>
+        <p>Integrantes del Equipo:</p>
+        <p><strong>Elias Oziel Sanchez Fernandez</strong> | <strong>Juan Pablo Rios Gomez</strong></p>
+        <br>
+        <a href="../contacto.html" style="color: #f3f4f6; text-decoration: underline;">comentarios y contacto</a>
+    </footer>
+    
+    
+    
+</body>
+</html>

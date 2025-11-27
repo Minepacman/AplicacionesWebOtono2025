@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assest/CSS/estilosPrincipal.css">
+    <title>Fundamentos</title>
+</head>
+
+<body>
+        
+   <header class="header-principal">
+        <div class="logo">
+            <img src="../../assest/IMG/LogoBUAPB.png" alt="logo BUAP"> 
+        </div>
+        <h1>Aplicaciones Web</h1>
+    </header>
+
+    <nav class="nav-principal">
+        <a href="../HTML.html">HTML</a>
+        <a href="../CSS.html">CSS</a>
+        <a href="../../Index.html">Página Principal</a>
+    </nav>
+     
+<div class="layout-contenido">
+
+        <aside class="sidebar-curso">
+            <h3>Índice del Tema</h3>
+            <ul>
+                <li><a href="#definicion">Definición Básica</a></li>
+                <li><a href="#estructura">Estructura de Bloque</a></li>
+                <li><a href="#estructurales">Elementos Estructurales</a></li>
+                <li><a href="#modelo-caja">Modelo de Caja</a></li>
+                <li><a href="#insercion">Métodos de Inserción</a></li>
+            </ul>
+        </aside>
+
+        <article class="detalle-texto">
+
+            <section id="definicion" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h1>Definición Básica de CSS</h1>
+                <p>
+                    CSS es una tecnología complementaria al HTML5. Es un lenguaje que trabaja junto con HTML para proveer estilos visuales a los elementos del documento, como tamaño, color, fondo, bordes, etc.
+                </p>
+                <p>
+                    <strong>CSS3</strong> tiene la capacidad de sobrescribir los estilos básicos del navegador, crear nuevos estilos y combinarlos para hacer páginas atractivas.
+                </p>
+                
+                <div style="background-color: #f9fafb; padding: 1rem; border: 1px solid #e5e7eb; border-radius: 8px;">
+                    <strong>Prefijos Importantes de Navegador:</strong>
+                    <ul>
+                        <li><code class="terminal2">-moz</code> (Mozilla Firefox)</li>
+                        <li><code class="terminal2">-webkit</code> (Chrome, Safari)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="estructura" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Estructura de Bloque</h2>
+                <p>
+                    Cuando hablamos de estructura, nos referimos a la manera en la que un sitio web está dispuesto. Cada navegador implementa una estructura por defecto.
+                </p>
+
+                <h3>Elementos Block</h3>
+                <p>
+                    Son elementos posicionados uno sobre otro hacia abajo en la página. Este es el comportamiento por defecto en los navegadores.
+                </p>
+
+                <h3>Elementos Inline-block</h3>
+                <p>
+                    Son elementos posicionados lado a lado, uno al lado del otro en la misma línea, sin ningún salto de línea a menos que ya no haya más espacio horizontal para ubicarlos.
+                </p>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="estructurales" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Definición de Elementos Estructurales</h2>
+                <p>
+                    Esto es con la finalidad de que el navegador maneje todas las estructuras de igual manera (Reset básico).
+                </p>
+                <pre class="terminal"><code>* {
+    margin: 0px;
+    padding: 0px;
+}
+header, section, article, footer, nav, aside, figure, figcaption, hgroup {
+    display: block;
+}</code></pre>
+                
+                <h3>Display: None</h3>
+                <p>
+                    El valor más sencillo de display es <code>none</code>. Hace que el elemento no genere ninguna caja; desaparece por completo de la página y no ocupa sitio.
+                </p>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="modelo-caja" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Modelo de Caja</h2>
+                <p>
+                    Se le denomina <strong>Modelo de Caja</strong> a todas las reglas que especifican la disposición en la que será organizada una página web.
+                </p>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 3rem 0;">
+
+            <section id="insercion" style="display: block; width: 100%; background: transparent; padding: 0;">
+                <h2>Métodos de Inserción de Estilos</h2>
+                
+                <h3>1. Estilos en Línea (Style)</h3>
+                <p>
+                    Es una forma simple y rudimentaria, considerada poco práctica.
+                </p>
+                <pre class="terminal"><code>&lt;p style="font-size: 40px"&gt; Esto es un párrafo &lt;/p&gt;</code></pre>
+                
+                <h3>2. Estilos Embebidos (Head)</h3>
+                <p>
+                    Se coloca el estilo entre las etiquetas <code class="terminal2">&lt;style&gt;</code> dentro del <code class="terminal2">&lt;head&gt;</code>.
+                </p>
+                <pre class="terminal"><code>&lt;head&gt;
+    &lt;style&gt;
+        p { font-size : 40px }
+    &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+
+                <h3>3. Archivos Externos (Link)</h3>
+                <p>
+                    Facilita la actualización de los estilos. Se implementa mediante el uso de la etiqueta <code class="terminal2">&lt;link&gt;</code>.
+                </p>
+                <pre class="terminal"><code>&lt;head&gt;
+    &lt;link rel="stylesheet" type="text/css" href="css/estilos.css"&gt;
+&lt;/head&gt;</code></pre>
+            </section>
+
+        </article>
+</div>
+
+      <footer>
+        <p>Integrantes del Equipo:</p>
+        <p><strong>Elias Oziel Sanchez Fernandez</strong> | <strong>Juan Pablo Rios Gomez</strong></p>
+        <br>
+        <a href="./Pages/contacto.html" style="color: #f3f4f6; text-decoration: underline;">comentarios y contacto</a>
+    </footer>
+    
+</body>
+</html>
